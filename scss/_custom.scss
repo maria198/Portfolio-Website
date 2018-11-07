@@ -1,1 +1,31 @@
-$backgroundcolor: blue;
+/*Colors*/
+$pink: #F986B3;
+$orange: #FFCA91;
+$yellow: #FFF5AF;
+$blue: #AEC5EB;
+$dark: #3A405A;
+$violet: #701EB3;
+
+$color-1: $pink;
+$color-2: #F6CA9E;
+$color-3: #F366AA;
+
+$color-text-light: #FFFFFF;
+$color-text-dark: #AB80CD;
+
+/*Fonts*/
+@font-face {
+  font-family: 'Bangla MN';
+  src: url('../assets/fonts/bangla-mn.ttf') format('truetype'); 
+}
+
+$font-header: 'Bangla MN', 'Montserrat', sans-serif;
+$font-text: 'Nunito', sans-serif;
+
+/*Gradients*/
+$gradient-home: linear-gradient(135deg, rgba($color-3,0.86) 5%, $color-1 50%, $color-2 );
+$gradient-nav: linear-gradient(115deg, rgba(lighten($violet,30),0.9), $color-1 40%, $color-2 );
+
+
+/*Spacing*/
+$pd: 1.25em;

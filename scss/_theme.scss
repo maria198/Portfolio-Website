@@ -1,0 +1,140 @@
+/* SCSS Document */
+
+
+
+/************************
+temporary!!!
+************************/
+.sidebar{
+	display:none;
+}
+.menu-mobile{
+	display:none;
+}
+body{
+	background-color: $color-1;
+}
+
+/***********
+1. Fonts
+***********/
+body,h3,h4,h5,h6{
+	font-family: $font-text;
+	font-weight: 300;
+}
+h1,h2 {
+	font-family: $font-header;
+	font-weight: 300;
+}
+/***********
+2. Body, main features
+***********/
+body{
+	color: $color-text-light;
+}
+.container{
+	padding-left: $pd;
+	padding-right: $pd;
+	height: 100%;
+}
+.p-relative{
+	position: relative;
+}
+.main-title{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.5em;
+	line-height: 1.25em;
+}
+.sub-title{
+	text-align: center;
+}
+.arrow-container{
+	text-align: center;
+	.arrow{
+		border: solid white;
+	    border-width: 0 2px 2px 0;
+	    display: inline-block;
+	    padding: 8px;
+	}
+	.down {
+	    transform: rotate(45deg);
+	}
+}
+
+/***********
+3. Section - 1
+***********/
+.section-1{
+	height: 100vh;
+}
+.section-background{
+	height:100%;
+}
+.gradient-home{
+	background-image: $gradient-home;
+}
+.home{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 90%;
+}
+.logo-container{
+	padding: 0.5em 0;
+	.logo{
+		position: relative;
+		height: 8em;
+		&:before{
+			content: '';
+			position: absolute;
+			top:0;
+			left:0;
+			background-image: url("../assets/icons/logo-fox_1.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			opacity: .5;
+			height: 8em;
+			width: 100%;
+		}
+		
+		img {
+			height: 6em;
+			margin: auto;
+			padding-top: 1.5em;
+			display: block;
+		}
+	}
+}
+
+/***********
+4. Navigation for mobile devices
+***********/
+.nav-top{
+	padding-top: $pd;
+	padding-bottom: $pd;
+	margin-left: -$pd;
+	margin-right: -$pd;
+
+	.nav-top-container{
+		padding: 0 $pd;
+	}
+}
+.bars{
+	width: 1.75em;
+	height: 1.5em;
+	.bar{
+		height: 0.2em;
+		background-color: white;
+	}
+	.bar-1{
+		width:100%;
+	}
+	.bar-2{
+		width:80%;
+	}
+	.bar-3{
+		width:55%;
+	}
+}
