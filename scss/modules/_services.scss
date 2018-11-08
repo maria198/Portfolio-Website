@@ -2,20 +2,26 @@
  Services
 ***********/
 .service{
+	
+	&:nth-child(3n-2){
+
+		.service-content{background-image: $gradient-service-n;}
+	}
+	&:nth-child(3n-1){
+		.service-content{background-image: $gradient-service-2n;}
+	}
+	&:nth-child(3n){
+		.service-content{background-image: $gradient-service-3n;}
+	}
+	
+
+}
+.service-content{
 	margin: $pd 0;
 	padding: $pd;
 	text-align: center;
 	@include shadow();
-	&:nth-child(n){
-		background-image: $gradient-service-n;
-	}
-	&:nth-child(2n){
-		background-image: $gradient-service-2n;
-	}
-	&:nth-child(3n){
-		background-image: $gradient-service-3n;
-	}
-
+	
 }
 .service-icon{
 	img{
@@ -26,23 +32,29 @@
 	padding: $pd/2;
 }
 
-@media only screen and (max-width: 576px) { 
+@media only screen and (min-width: 576px) { 
 	.services{
 
 	}
 	.services-container{
-		@extend .row;
+		@include make-row();
 	}
 	.service{
-		@extend .col-2;
+		@include make-col(6);
+	}
+	.service-content{
+		margin: $pd/2;
 	}
 }
-@media only screen and (max-width: 768px) { 
+@media only screen and (min-width: 768px) { 
 
 } 
-@media only screen and (max-width: 991px) { 
-
+@media only screen and (min-width: 991px) { 
+	.service{
+		
+		@include make-col(4);
+	}
 }
-@media only screen and (max-width: 1199px) { 
+@media only screen and (min-width: 1199px) { 
 
 }  
