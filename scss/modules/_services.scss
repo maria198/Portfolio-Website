@@ -1,0 +1,48 @@
+/***********
+ Services
+***********/
+.service{
+	margin: $pd 0;
+	padding: $pd;
+	text-align: center;
+	@include shadow();
+	&:nth-child(n){
+		background-image: $gradient-service-n;
+	}
+	&:nth-child(2n){
+		background-image: $gradient-service-2n;
+	}
+	&:nth-child(3n){
+		background-image: $gradient-service-3n;
+	}
+
+}
+.service-icon{
+	img{
+		height: 4em;
+	}
+}
+.service-title{
+	padding: $pd/2;
+}
+
+@media only screen and (max-width: 576px) { 
+	.services{
+
+	}
+	.services-container{
+		@extend .row;
+	}
+	.service{
+		@extend .col-2;
+	}
+}
+@media only screen and (max-width: 768px) { 
+
+} 
+@media only screen and (max-width: 991px) { 
+
+}
+@media only screen and (max-width: 1199px) { 
+
+}  

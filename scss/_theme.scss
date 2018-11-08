@@ -12,7 +12,7 @@ temporary!!!
 	display:none;
 }
 body{
-	background-color: $color-1;
+	
 }
 
 /***********
@@ -24,7 +24,6 @@ body,h3,h4,h5,h6{
 }
 h1,h2 {
 	font-family: $font-header;
-	font-weight: 300;
 }
 /***********
 2. Body, main features
@@ -36,6 +35,7 @@ body{
 	padding-left: $pd;
 	padding-right: $pd;
 	height: 100%;
+	max-width: 100%;
 }
 .p-relative{
 	position: relative;
@@ -45,6 +45,7 @@ body{
 	text-align: center;
 	font-size: 1.5em;
 	line-height: 1.25em;
+	h1 {font-weight: 500;}
 }
 .sub-title{
 	text-align: center;
@@ -61,10 +62,23 @@ body{
 	    transform: rotate(45deg);
 	}
 }
+.section-title{
+	padding-top: 2em;
+	h2{
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+}
+.violet{
+	color: rgba($violet,0.7);
+}
 
 /***********
-3. Section - 1
+3. Sections 
 ***********/
+
+/* 3.1. Section-1 / Home */
+
 .section-1{
 	height: 100vh;
 }
@@ -73,6 +87,7 @@ body{
 }
 .gradient-home{
 	background-image: $gradient-home;
+	background-attachment: fixed;
 }
 .home{
 	position: absolute;
@@ -108,6 +123,17 @@ body{
 	}
 }
 
+/* 3.2. Section-2  */
+.section-2{
+	/*height: 50vh;*/
+}
+.gradient-services{
+	background-image: $gradient-services;
+}
+/* 3.3. Section-3  */
+.gradient-works{
+	background-image: $gradient-works;
+}
 /***********
 4. Navigation for mobile devices
 ***********/
@@ -122,11 +148,11 @@ body{
 	}
 }
 .bars{
-	width: 1.75em;
-	height: 1.5em;
+	height: $bars-height;
+	width: $bars-width;
 	.bar{
-		height: 0.2em;
-		background-color: white;
+		height: $bar-height;
+		background-image: $gradient-bars;
 	}
 	.bar-1{
 		width:100%;
@@ -138,3 +164,8 @@ body{
 		width:55%;
 	}
 }
+
+
+/***********
+6. Effects
+***********/

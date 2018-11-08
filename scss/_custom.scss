@@ -1,6 +1,6 @@
 /*Colors*/
 $pink: #F986B3;
-$orange: #FFCA91;
+$orange: #F7AFA6;
 $yellow: #FFF5AF;
 $blue: #AEC5EB;
 $dark: #3A405A;
@@ -19,13 +19,28 @@ $color-text-dark: #AB80CD;
   src: url('../assets/fonts/bangla-mn.ttf') format('truetype'); 
 }
 
-$font-header: 'Bangla MN', 'Montserrat', sans-serif;
+$font-header: /*'Bangla MN',*/ 'Montserrat', sans-serif;
 $font-text: 'Nunito', sans-serif;
 
 /*Gradients*/
 $gradient-home: linear-gradient(135deg, rgba($color-3,0.86) 5%, $color-1 50%, $color-2 );
+$gradient-services: linear-gradient(180deg, rgba($violet,0.60) , lighten($color-2, 15) );
+$gradient-works: linear-gradient(180deg, lighten($color-2, 15), rgba($violet,0.60) );
 $gradient-nav: linear-gradient(115deg, rgba(lighten($violet,30),0.9), $color-1 40%, $color-2 );
+$gradient-bars: linear-gradient( to right , rgba(white,0.5) 5%,rgba(white,1) 75%,rgba(white,0.75));
 
-
+$gradient-service-n: linear-gradient(135deg, rgba($color-1,0.86) 30%, rgba(lighten($color-1,25),0.5) ); 
+$gradient-service-2n: linear-gradient(135deg, rgba($orange,1) 30%, rgba(lighten($color-1,20),0.4) );
+$gradient-service-3n: linear-gradient(135deg, rgba($color-2,1) 30%, rgba(lighten($color-1,20),0.4) );  
 /*Spacing*/
 $pd: 1.25em;
+
+/*Icon Bars*/
+$bars-height: 1.5em;
+$bars-width: 1.75em;
+$bar-height: 0.25em;
+
+/* Mixins */
+@mixin shadow{
+	box-shadow: 2px 1px 6px 1px rgba(0,0,0,0.15);
+}
