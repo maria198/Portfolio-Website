@@ -140,11 +140,20 @@ body{
 .nav-top{
 	padding-top: $pd;
 	padding-bottom: $pd;
-	margin-left: -$pd;
-	margin-right: -$pd;
+	position: relative;
+	height:64px;
+	&:after{
+		opacity:0;
+		content:'';
+		top:0;
+		left:0;
+		height:100%;
+		width: 100%;
+		z-index:60;
+		background-image:$gradient-nav;
+		position: absolute;
+		transition: opacity 400ms ease;
 
-	.nav-top-container{
-		padding: 0 $pd;
 	}
 }
 .bars{
@@ -163,6 +172,25 @@ body{
 	.bar-3{
 		width:55%;
 	}
+}
+.fixed{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    @include shadow();
+    .nav-top-container{
+		padding: 0 $pd;
+		position:absolute;
+		left:0;
+		width:100%;
+		z-index: 110;
+	}
+	&:after{
+		opacity:1;
+	}
+
 }
 
 
