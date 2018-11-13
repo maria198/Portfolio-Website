@@ -26,12 +26,16 @@ $font-text: 'Nunito', sans-serif;
 $gradient-home: linear-gradient(135deg, rgba($color-3,0.86) 5%, $color-1 50%, $color-2 );
 $gradient-services: linear-gradient(180deg, rgba($violet,0.60) , lighten($color-2, 15) );
 $gradient-works: linear-gradient(180deg, lighten($color-2, 15), rgba($violet,0.60) );
+$gradient-about: linear-gradient(180deg, rgba(lighten($violet,30),0.9) , lighten($color-1,5) 40%, lighten($color-2,10) );
+
 $gradient-nav: linear-gradient(115deg, rgba(lighten($violet,30),0.9), $color-1 40%, $color-2 );
 $gradient-bars: linear-gradient( to right , rgba(white,0.5) 5%,rgba(white,1) 75%,rgba(white,0.75));
 
 $gradient-service-n: linear-gradient(135deg, rgba($color-1,0.86) 30%, rgba(lighten($color-1,25),0.5) ); 
 $gradient-service-2n: linear-gradient(135deg, rgba($orange,1) 30%, rgba(lighten($color-1,20),0.4) );
 $gradient-service-3n: linear-gradient(135deg, rgba($color-2,1) 30%, rgba(lighten($color-1,20),0.4) );  
+
+$gradient-title: linear-gradient(115deg, rgba(lighten($violet,20),0.75), rgba( lighten($color-1, 9), 0.95)  );
 /*Spacing*/
 $pd: 1.25em;
 

@@ -1,0 +1,47 @@
+/***********
+Works
+***********/
+.work{
+	width: 100%;
+	img{
+		width: 100%;
+	}
+	.work-title{
+		background-image: $gradient-title;
+		h3{
+			margin: 0;
+			padding: $pd/2 $pd;
+		}
+	}
+}
+.work-content{
+	margin: $pd 0;
+	@include shadow();
+	
+}
+
+@media only screen and (min-width: 576px) { 
+
+	.works-container{
+		@include make-row();
+	}
+	.work{
+		@include make-col(6);
+	}
+	.work-content{
+		margin: $pd/2;
+	}
+}
+@media only screen and (min-width: 768px) { 
+
+} 
+@media only screen and (min-width: 991px) { 
+	.container{
+	max-width: 80%;
+}
+}
+@media only screen and (min-width: 1199px) { 
+	.work{
+		@include make-col(4);
+	}
+} 

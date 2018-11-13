@@ -1,0 +1,44 @@
+/***********
+About
+***********/
+
+.about-icon{
+	img{
+		height:4em;
+		width: auto;
+		padding-right: $pd;
+	}
+}
+.about-container{
+	.row{
+		align-items: top;
+		margin: $pd*1.5 0 !important;
+	}
+}
+.about-text{
+	p,h3{
+		margin: 0;
+	}
+	ul{
+		padding:0;
+		list-style-type: none;
+
+		li:before {
+		    content: "-"; 
+		    padding-right: 16px;
+		}
+	}
+}
+@media only screen and (min-width: 576px) { 
+
+
+}
+@media only screen and (min-width: 768px) { 
+
+} 
+@media only screen and (min-width: 991px) { 
+
+}
+@media only screen and (min-width: 1199px) { 
+
+} 
