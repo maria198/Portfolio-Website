@@ -36,6 +36,16 @@ $gradient-service-2n: linear-gradient(135deg, rgba($orange,1) 30%, rgba(lighten(
 $gradient-service-3n: linear-gradient(135deg, rgba($color-2,1) 30%, rgba(lighten($color-1,20),0.4) );  
 
 $gradient-title: linear-gradient(115deg, rgba(lighten($violet,20),0.75), rgba( lighten($color-1, 9), 0.95)  );
+
+$gradient-input: linear-gradient( to right , rgba($color-1, 0.1),rgba($color-3,0.2));
+
+/*Border Gradients*/
+@mixin border-grd{
+	border-style: solid;
+	border-image: $gradient-bars;
+	border-image-slice: 1;
+	border-width: 2px;
+}
 /*Spacing*/
 $pd: 1.25em;
 

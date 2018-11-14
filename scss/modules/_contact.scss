@@ -1,0 +1,76 @@
+/***********
+Contact, Contact Form
+***********/
+.contact-info{
+	display: none;
+}
+
+.contact-form{
+}
+.container-input{
+	position: relative;
+	padding: $pd/2 $pd;
+	margin: 0 (-$pd);
+	.rect{			
+		@include border-grd();
+		height:0.75em;
+		width: 100%;
+		transition: all ease-in-out 0.2s;
+	}
+	label{
+		position: absolute;
+		z-index: 20;
+		top: 1.70em;
+		color: $color-1;
+		padding: 0 $pd;
+		margin:0;
+		transition: all ease-in-out 0.2s;
+	}
+	input,textarea{
+		width: 100%;
+		background-image: $gradient-input;
+		opacity: 0.9;
+		border: none;
+		@include shadow();
+		padding: $pd/4;
+		text-indent: $pd/2;
+
+	}
+	/*input:focus{
+	}
+	input:focus + label, textarea:focus + label{
+		top: 0;
+		font-size: 0.75em;
+		color: white;
+	}*/
+	label.focus{
+		top: 1em;
+		font-size: 0.75em;
+		color: white;
+	}
+	.rect.focus{
+		height:1.25em;
+		background-color: lighten( rgba($violet,0.5),25);
+	}
+}
+.btn-submit{
+	@include border-grd();
+	@include shadow();
+	color: white;
+	text-transform: uppercase;
+	background-color: lighten($color-1,10);
+	width: 100%;
+	margin: $pd/2 0 $pd 0;
+}
+@media only screen and (min-width: 576px) { 
+
+}
+@media only screen and (min-width: 768px) { 
+
+} 
+@media only screen and (min-width: 991px) { 
+
+}
+@media only screen and (min-width: 1199px) { 
+
+}  

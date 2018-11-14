@@ -97,7 +97,7 @@ body{
 	transform: translate(-50%,-50%);
 	}
 	.main-title, .sub-title, .arrow-container, .logo-container{
-		transition: all 1s ease-in-out;
+		transition: all 0.5s ease-in-out;
 	}
 }
 .main-title{
@@ -184,6 +184,7 @@ body{
 /* 3.4. Section-4  */
 .gradient-about{
 	background-image: $gradient-about;
+	background-attachment: fixed;
 }
 .section-4{
 	min-height: 100vh;
@@ -261,6 +262,7 @@ body{
 .footer-container{
 	margin-right: -$pd;
 	margin-left: -$pd;
+	background-color: lighten($color-3, 10);
 }
 .footer-contact, .footer-media{
 	padding: $pd/2 $pd;

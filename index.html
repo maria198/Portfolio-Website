@@ -316,25 +316,31 @@
 							<h3>Contact info</h3>
 							<h5></h5>
 						</div>
+						<h3>Get in touch, send me a message</h3>
 						<!-- contact form -->
 						<div class="contact-form">
 							<form action="">
-								<div class="row">
-									<label for=""></label>
-									<input type="text">
+								<div class="row container-input">
+									<div class="rect"></div>	
+									<input id="name" name="name" type="text">
+									<label for="name">Your Name</label>
 								</div>
-								<div class="row">
-									<label for=""></label>
-									<input type="text">
+								<div class="row container-input">
+									<div class="rect"></div>
+									<input id="email" name="email" type="email">
+									<label for="email">E-mail</label>
 								</div>
-								<div class="row">
-									<label for=""></label>
-									<input type="text">
+								<div class="row container-input">
+									<div class="rect"></div>
+									<input id="pNumber" name="pNumber" type="text">
+									<label for="pNumber">Phone Number</label>
 								</div>
-								<div class="row">
-									<label for=""></label>
-									<textarea name="" id="" cols="30" rows="10"></textarea>
+								<div class="row container-input">
+									<div class="rect"></div>
+									<textarea name="message" id="message" cols="30" rows="5"></textarea>
+									<label for="message">Message</label>
 								</div>
+									<input id="contactSubmit" class="btn-submit" type="submit" value="Send">
 							</form>
 						</div>
 						<div class="contact-text"></div>
@@ -376,6 +382,7 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="js/scroll.js"></script>
+	<script src="js/script.js"></script>
 
 </body>
 </html>
