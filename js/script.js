@@ -12,4 +12,15 @@ $(function(){
 			$(this).next().removeClass('focus');
 		}
 	});
+
+	$('#closeMobMenu').on('click', function(){
+		$('.menu-mobile').addClass('closed');
+	});
+	$('.menu-mobile a').on('click', function(){
+		$('.menu-mobile').addClass('closed');
+	});
+
+	$('#openMobMenu').on('click', function(){
+		$('.menu-mobile').removeClass('closed');
+	});
 });

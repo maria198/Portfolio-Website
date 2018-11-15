@@ -11,14 +11,17 @@
 <body>
 	
 	<!--  menu for the mobile version -->
-	<div class="menu-mobile">
+	<div class="menu-mobile closed">
 		<div class="menu-mobile-container">
+			<div id="closeMobMenu" class="close-button">
+				<i class="fas fa-times"></i>
+			</div>
 			<ul class="menu-mobile-list">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Works</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="#section-1">Home</a></li>
+				<li><a href="#section-2">Services</a></li>
+				<li><a href="#section-3">Works</a></li>
+				<li><a href="#section-4">About</a></li>
+				<li><a href="#section-5">Contact</a></li>
 			</ul>
 		</div>
 	</div>
@@ -46,7 +49,7 @@
 			<div class="container">
 				<nav class="nav-top">
 					<div class="nav-top-container d-flex justify-content-end">
-						<div class="bars d-flex flex-column justify-content-between align-items-end">
+						<div id="openMobMenu"  class="bars d-flex flex-column justify-content-between align-items-end">
 							<div class="bar bar-1"></div>
 							<div class="bar bar-2"></div>
 							<div class="bar bar-3"></div>
@@ -355,7 +358,7 @@
 		<div class="container">
 			<div class="footer-container">
 				<div class="footer-contact">
-					<h5>Contact:</h5>
+					<h4>Contact:</h4>
 					<div class="footer-phone row">
 						<i class="fas fa-mobile-alt"></i>
 						<p>+64220628575</p>
@@ -366,7 +369,7 @@
 					</div>
 				</div>
 				<div class="footer-media">
-					<h5>Media:</h5>
+					<h4>Media:</h4>
 					<div class="footer-media-icons">
 						<i class="fab fa-linkedin"></i>
 						<i class="fab fa-facebook"></i>

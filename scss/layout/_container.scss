@@ -1,0 +1,33 @@
+.container{
+	padding-left: $pd;
+	padding-right: $pd;
+	height: 100%;
+	max-width: 100%;
+}
+.section-background{
+	padding-bottom: $pd*2;
+}
+
+@media only screen and (min-width: 576px) { 
+	.container{
+		padding-left: $pd*2.5;
+		padding-right: $pd*2.5;
+	}
+}
+@media only screen and (min-width: 768px) { 
+	
+} 
+@media only screen and (min-width: 991px) { 
+	.container{
+		padding-left: $pd*3;
+		padding-right: $pd*3;
+	}
+	.section, .section-background{
+		min-height: 800px;
+	}
+}
+@media only screen and (min-width: 1199px) { 
+	.container{
+		max-width: 1000px;
+	}
+} 

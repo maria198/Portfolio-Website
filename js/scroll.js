@@ -21,6 +21,15 @@ $(function(){
 
 		}
 
+		if( iScrollTop>navOffset.top){
+			$('.sidebar').addClass('show');
+		}else{
+			//--unfix it
+			$('.sidebar').removeClass('show');
+
+		}
+
+
 
 		if( iScrollTop> (homeOffset.top - (homeOffset.top*0.9))){
 			//-fix the nav position
