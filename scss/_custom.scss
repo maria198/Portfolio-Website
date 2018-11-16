@@ -54,6 +54,9 @@ $bars-height: 1.5em;
 $bars-width: 1.75em;
 $bar-height: 0.25em;
 
+/*Sidebar*/
+$sidebar-w: 70px;
+
 /* Mixins */
 @mixin shadow{
 	box-shadow: 2px 1px 6px 1px rgba(0,0,0,0.15);

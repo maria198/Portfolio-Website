@@ -11,12 +11,57 @@ Sidebar
 } 
 @media only screen and (min-width: 991px) { 
 	.sidebar{
+		width: $sidebar-w;
 		position: fixed;
 		height: 100vh;
-		background-color: $color-1;
+		background-color: rgba(white,0.85);
 	}
 	.sidebar.show{
 		display: block;
+	}
+	.sidebar-list{
+		writing-mode:vertical-rl;
+		transform: rotate(180deg);
+		direction: rtl;
+		font-family: $font-header;
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 1.25em;
+		padding:0;
+		margin:0;
+		margin-top: 4em;
+		width: 100%;
+		height: 60%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		li{
+			display: block;
+			&.active{
+				a{color: $color-1;}
+			}
+		}
+		a{
+			color: rgba(lighten($violet,20), 0.6);
+			text-decoration: none;
+			transition: all 0.2s ease;
+		}
+	}
+	.sidebar-logo{
+		height: $sidebar-w;
+		background-color: $color-1;
+		position: relative;
+		&:after{
+			content: '';
+			position: absolute;
+			top: 100%;
+			left:0;
+	      	width: 0;
+	      	height: 0;
+	      	border-top: $sidebar-w/1.5 solid $color-1;
+	      	border-left: $sidebar-w solid transparent;
+	    }
 	}
 }
 @media only screen and (min-width: 1199px) { 

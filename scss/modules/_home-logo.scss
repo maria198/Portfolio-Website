@@ -141,3 +141,18 @@ Home - logo
 		}
 	}
 } 
+@media only screen and (min-width: 991px){
+	.home.fixed{
+		.logo-container{
+			width: $sidebar-w;
+			margin-top: $pd/4;
+			padding-left: 0;
+			.logo{
+				img{
+					margin:0 auto;
+					height: 3em;
+				}
+			}
+		}
+	}
+}

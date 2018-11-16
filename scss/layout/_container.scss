@@ -19,8 +19,8 @@
 } 
 @media only screen and (min-width: 991px) { 
 	.container{
-		padding-left: $pd*3;
-		padding-right: $pd*3;
+		padding-left: $pd*3 ;
+		padding-right: calc(#{$pd}*3 - #{$sidebar-w});
 	}
 	.section, .section-background{
 		min-height: 800px;

@@ -1,12 +1,11 @@
 /***********
 Footer
 ***********/
-.footer-container{
+footer{
 	background-color: rgba(lighten($color-3, 10), 0.8);
 }
 .footer-contact, .footer-media{
 	padding: $pd/2 0;
-	/*background-color: rgba(lighten($color-3, 10), 0.8);*/
 	p{
 		margin:0;
 	}
@@ -40,12 +39,19 @@ Footer
 		align-items: center;
 	}
 	.footer-copyright{
-		flex: 1 0 80%;
 		text-align: center;
 	}
 } 
 @media only screen and (min-width: 991px) { 
-
+	footer{
+		background-color: lighten($color-2,10);
+	}
+	.footer-contact{
+		color: rgba(lighten($violet,20), 0.8);
+	}
+	.footer-copyright{
+		background-color: lighten($color-2,10);
+	}
 }
 @media only screen and (min-width: 1199px) { 
 
