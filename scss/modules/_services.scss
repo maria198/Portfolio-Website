@@ -36,18 +36,21 @@
 	.services{
 
 	}
+	
+	.service-content{
+		margin: $pd 0;
+	}
+}
+@media only screen and (min-width: 768px) { 
+	.service-content{
+		margin: $pd/2 $pd/2;
+	}
 	.services-container{
 		@include make-row();
 	}
 	.service{
 		@include make-col(6);
 	}
-	.service-content{
-		margin: $pd/2;
-	}
-}
-@media only screen and (min-width: 768px) { 
-
 } 
 @media only screen and (min-width: 991px) { 
 	

@@ -9,17 +9,22 @@ Menu-mobile
 	background-image: $gradient-nav;
 	opacity: 0.9;
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	.menu-mobile-container{
 		padding: $pd*2;
 		height: 100%;
+		display: block;
 	}
 	transition: all 1s ease;
 }
 .menu-mobile.closed{
 	position: fixed;
-	top: -100%;
+	top: -120%;
 	height:0;
+	
+	.menu-mobile-container{
+		display: none;
+	}
 }
 .menu-mobile-list{
 	height:50%;

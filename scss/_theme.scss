@@ -33,28 +33,8 @@ body{
 .p-relative{
 	position: relative;
 }
-.main-title{
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 1.5em;
-	line-height: 1.25em;
-	h1 {font-weight: 500;}
-}
-.sub-title{
-	text-align: center;
-}
-.arrow-container{
-	text-align: center;
-	.arrow{
-		border: solid white;
-	    border-width: 0 2px 2px 0;
-	    display: inline-block;
-	    padding: 12px;
-	}
-	.down {
-	    transform: rotate(45deg);
-	}
-}
+
+
 .section-title{
 	padding-top: calc(1.5em + 64px);
 	h2{
@@ -62,6 +42,7 @@ body{
 		text-transform: uppercase;
 	}
 }
+
 .violet{
 	color: rgba($violet,0.7);
 }
@@ -82,90 +63,7 @@ body{
 	background-image: $gradient-home;
 	background-attachment: fixed;
 }
-.home{
-	.arrow-container{
-	position: absolute;
-	top: 72%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	}
-	.main-title, .sub-title, .arrow-container, .logo-container{
-		transition: all 0.5s ease-in-out;
-	}
-}
-.main-title{
-	position: absolute;
-	top: 30%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-}
-.sub-title{
-	position: absolute;
-	top: 65%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-}
-.logo-container{
-	position:fixed;
-	top: 47%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	padding: 0.5em 0;
-	width: 70%;
-	.logo{
-		transition: all 0.5s ease-in-out;
-		position: relative;
-		height: 8em;
-		&:before{
-			transition: all 0.5s ease-in-out;
-			content: '';
-			position: absolute;
-			top:0;
-			left:0;
-			background-image: url("../assets/icons/logo-fox_1.svg");
-			background-repeat: no-repeat;
-			background-position: center;
-			opacity: .5;
-			height: 8em;
-			width: 100%;
-		}
-		
-		img {
-			height: 6em;
-			margin: auto;
-			padding-top: 1.5em;
-			display: block;
-		}
-	}
-}
-.home.fixed{
-	.main-title, .sub-title, .arrow-container{
-		opacity: 0;
-		top: 50%;
-	}
-	.logo-container{
-		top: 0%;
-		left: 0%;
-		transform: translate(0,0);
-		z-index: 200;
-		width: 70%;
-		height: 64px;
-		padding: $pd/2 0;
-		.logo{
-			height: auto;
-			img{
-				padding:0;
-				height: 2.5em;
-				margin: 0 $pd;
-			}
-			&:before{
-				opacity: 0;
-				height:1em;
-				width:1em;
-			}
-		}
-	}
-}
+
 /* 3.2. Section-2  */
 .section-2{
 	/*height: 50vh;*/
@@ -190,106 +88,22 @@ body{
 .section-4{
 	/*height: 100vh;*/
 }
-/***********
-4. Navigation for mobile devices
-***********/
-.nav-top{
-	padding-top: $pd;
-	padding-bottom: $pd;
-	position: relative;
-	height:64px;
-	&:after{
-		opacity:0;
-		content:'';
-		top:0;
-		left:0;
-		height:100%;
-		width: 100%;
-		z-index:-1;
-		background-image:$gradient-nav;
-		position: absolute;
-		transition: opacity 400ms ease;
 
+@media only screen and (min-width: 768px) { 
+	.section-title.title-center{
+		text-align: center;
 	}
-}
-.bars{
-	height: $bars-height;
-	width: $bars-width;
-	.bar{
-		height: $bar-height;
-		background-image: $gradient-bars;
-	}
-	.bar-1{
-		width:100%;
-	}
-	.bar-2{
-		width:80%;
-	}
-	.bar-3{
-		width:55%;
-	}
-}
-.nav-top.fixed{
-    position: fixed;
-    top:0;
-    left: 0;
-    z-index: 100;
-    width: 100%;
-    @include shadow();
-    .nav-top-container{
-		padding: 0 $pd;
-		position:absolute;
-		left:0;
-		width:100%;
-		z-index: 110;
-	}
-	&:after{
-		z-index:60;
-		opacity:1;
-	}
-
-}
-@media only screen and (min-width: 991px) { 
-	.nav-top{
-		display: none;
-	}
-} 
-
-
-/***********
-5. Footer
-***********/
-.footer-container{
-	margin-right: -$pd;
-	margin-left: -$pd;
-	background-color: lighten($color-3, 10);
-}
-.footer-contact, .footer-media{
-	padding: $pd/2 $pd;
-	background-color: lighten($color-3, 10);
-	p{
-		margin:0;
-	}
-	.row{
+	.section-title{
 		padding-bottom: $pd/2;
-		margin: 0;
-		align-items: center;
-		i{
-			padding-right: $pd/2;
-			font-size: 1.25em;
-			width: 1.5em;
-			text-align:center;
+		font-size: 1.25em;
+	}
+	/*.section-3,.section-4{
+		min-height: 100vh;
+		.section-background{
+			min-height: 100vh;
 		}
-	}
-}
-.footer-copyright{
-	padding: $pd/2 $pd;
-	background-color: lighten($color-3, 5);
-	h6{
-		margin:0;
-	}
-}
-
+	}*/
+} 
 
 
 

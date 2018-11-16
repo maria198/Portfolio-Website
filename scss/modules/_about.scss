@@ -31,11 +31,44 @@ About
 	}
 }
 @media only screen and (min-width: 576px) { 
-
+	.about-text{
+		padding-left: $pd*2;
+	}
 
 }
 @media only screen and (min-width: 768px) { 
-
+	.about-container{
+		.row {
+			&:nth-child(odd){justify-content: flex-end;}
+			&:nth-child(even){
+				justify-content: flex-start;
+				.about-text{
+					order: 1;
+					text-align: right;
+				}
+				.about-icon{
+					order: 2;
+				}
+			}
+			&:last-of-type{
+				flex-direction: column;
+				align-items: center;
+				h3{text-align: center;}
+			}
+		}
+		.about-text{
+			@include make-col(5);
+			padding-left: 0;
+		}
+		.about-icon{
+			@include make-col(2);
+			padding: 0 $pd;
+			text-align: center;
+			img{
+				padding-right: 0;
+			}
+		}
+	}
 } 
 @media only screen and (min-width: 991px) { 
 

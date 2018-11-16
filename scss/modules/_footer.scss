@@ -1,0 +1,52 @@
+/***********
+Footer
+***********/
+.footer-container{
+	background-color: rgba(lighten($color-3, 10), 0.8);
+}
+.footer-contact, .footer-media{
+	padding: $pd/2 0;
+	/*background-color: rgba(lighten($color-3, 10), 0.8);*/
+	p{
+		margin:0;
+	}
+	.row{
+		padding-bottom: $pd/2;
+		margin: 0;
+		align-items: center;
+		i{
+			padding-right: $pd/2;
+			font-size: 1.25em;
+			width: 1.5em;
+			text-align:center;
+		}
+	}
+}
+.footer-copyright{
+	padding: $pd/2 0;
+	background-color: lighten($color-3, 5);
+	h6{
+		margin:0;
+	}
+}
+@media only screen and (min-width: 576px) { 
+
+}
+@media only screen and (min-width: 768px) { 
+	.footer-container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.footer-copyright{
+		flex: 1 0 80%;
+		text-align: center;
+	}
+} 
+@media only screen and (min-width: 991px) { 
+
+}
+@media only screen and (min-width: 1199px) { 
+
+} 

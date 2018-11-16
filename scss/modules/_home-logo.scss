@@ -1,0 +1,143 @@
+/***********
+Home - logo
+***********/
+.home{
+	.arrow-container{
+		position: absolute;
+		top: 72%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.main-title, .sub-title, .arrow-container, .logo-container{
+		transition: all 0.5s ease-in-out;
+	}
+}
+.main-title{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.5em;
+	line-height: 1.25em;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	h1 {font-weight: 200;}
+}
+.sub-title{
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.logo-container{
+	position:fixed;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 0.5em 0;
+	width: 70%;
+	.logo{
+		transition: all 0.5s ease-in-out;
+		position: relative;
+		height: 8em;
+		&:before{
+			transition: all 0.5s ease-in-out;
+			content: '';
+			position: absolute;
+			top:0;
+			left:0;
+			background-image: url("../assets/icons/logo-fox_1.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+			opacity: .5;
+			height: 8em;
+			width: 100%;
+		}
+		
+		img {
+			height: 6em;
+			margin: auto;
+			padding-top: 1.5em;
+			display: block;
+		}
+	}
+}
+.home.fixed{
+	.main-title, .sub-title, .arrow-container{
+		opacity: 0;
+		top: 50%;
+	}
+	.logo-container{
+		top: 0%;
+		left: 0%;
+		transform: translate(0,0);
+		z-index: 200;
+		width: 70%;
+		height: 64px;
+		padding: $pd/2 0;
+		.logo{
+			height: auto;
+			img{
+				padding:0;
+				height: 2.5em;
+				margin: 0 $pd;
+			}
+			&:before{
+				opacity: 0;
+				height:0;
+				width:0;
+			}
+		}
+	}
+}
+.arrow-container{
+	text-align: center;
+	.arrow{
+		border: solid white;
+	    border-width: 0 2px 2px 0;
+	    display: inline-block;
+	    padding: 12px;
+	}
+	.down {
+	    transform: rotate(45deg);
+	}
+}
+@media only screen and (min-width: 576px) { 
+	.home.fixed{
+		.logo-container{
+			padding-left: $pd*2.5;
+			.logo{
+				img{
+					margin:0;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 768px) { 
+	.logo-container{
+		.logo{
+			height: 11em;
+			&:before{
+				height: 11em;
+			}
+			
+			img {
+				height: 8em;
+			}
+		}
+	}
+	.main-title{
+		font-size: 2em;
+	}
+	.sub-title{
+		font-size: 1.5em;
+	}
+	.arrow-container{
+		.arrow{
+		    border-width: 0 3px 3px 0;
+		    padding: 15px;
+		}
+	}
+} 

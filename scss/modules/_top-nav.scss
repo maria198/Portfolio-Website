@@ -1,0 +1,83 @@
+/***********
+Navigation for mobile devices
+***********/
+.nav-top{
+	padding-top: $pd;
+	padding-bottom: $pd;
+	position: relative;
+	height:64px;
+	&:after{
+		opacity:0;
+		content:'';
+		top:0;
+		left:0;
+		height:100%;
+		width: 100%;
+		z-index:-1;
+		background-image:$gradient-nav;
+		position: absolute;
+		transition: opacity 400ms ease;
+
+	}
+}
+.bars{
+	height: $bars-height;
+	width: $bars-width;
+	.bar{
+		height: $bar-height;
+		background-image: $gradient-bars;
+	}
+	.bar-1{
+		width:100%;
+	}
+	.bar-2{
+		width:80%;
+	}
+	.bar-3{
+		width:55%;
+	}
+}
+.nav-top.fixed{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    @include shadow();
+    .nav-top-container{
+		padding: 0 $pd;
+		position:absolute;
+		left:0;
+		width:100%;
+		z-index: 110;
+	}
+	&:after{
+		z-index:60;
+		opacity:1;
+	}
+
+}
+
+@media only screen and (min-width: 576px) { 
+	.nav-top{
+		padding-top: $pd*2;
+	}
+	.nav-top.fixed{
+		padding-top: $pd;
+		.nav-top-container{
+			padding: 0 $pd*2.5;
+		}
+	}
+}
+@media only screen and (min-width: 768px) { 
+
+} 
+@media only screen and (min-width: 991px) { 
+	.nav-top{
+		display: none;
+	}
+} 
+@media only screen and (min-width: 1199px) { 
+
+}  
+
