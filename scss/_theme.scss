@@ -58,35 +58,60 @@ body{
 }
 .section-background{
 	height:100%;
+	&:before{
+		position: fixed;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		opacity: 0;
+		transition: opacity 1s ease;
+	}
+	
+}
+.section-background.show{
+	&:before{
+		opacity: 1;
+	}
+	
 }
 .gradient-home{
-	background-image: $gradient-home;
-	background-attachment: fixed;
+	
+	&:before{
+		background-image: $gradient-home;
+		opacity: 0.5;
+	}
+	
 }
 
 /* 3.2. Section-2  */
-.section-2{
-	/*height: 50vh;*/
-}
 .gradient-services{
-	background-image: $gradient-services;
+	&:before{
+		background-image: $gradient-services;
+	}
+	
 }
 /* 3.3. Section-3  */
 .gradient-works{
-	background-image: $gradient-works;
+	&:before{
+		background-image: $gradient-works;
+	}
+	
 }
 
 /* 3.4. Section-4  */
 .gradient-about{
-	background-image: $gradient-about;
-	background-attachment: fixed;
+	&:before{
+		background-image: $gradient-about;
+	}
 }
 /* 3.5. Section-5  */
 .gradient-contact{
-	background-image: $gradient-about;
-}
-.section-4{
-	/*height: 100vh;*/
+	&:before{
+		background-image: $gradient-about;
+	}
 }
 
 @media only screen and (min-width: 768px) { 
@@ -97,12 +122,7 @@ body{
 		padding-bottom: $pd/2;
 		font-size: 1.25em;
 	}
-	/*.section-3,.section-4{
-		min-height: 100vh;
-		.section-background{
-			min-height: 100vh;
-		}
-	}*/
+
 } 
 
 

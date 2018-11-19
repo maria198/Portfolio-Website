@@ -42,32 +42,30 @@ $(function(){
 		}
 
 		//-----higlights the right section in the nav while scrolling
-		var offset1 = $('.section-2').offset().top - 50;
-		var offset2 = $('.section-3').offset().top - 50;
-		var offset3 = $('.section-4').offset().top - 50;
-		var offset4 = $('.section-5').offset().top - 50;
-
 		let activeLi;
-
-		if (iScrollTop>=offset1 && iScrollTop < offset2){
-			activeLi = $('.sidebar-list>li:nth-child(1)');
-		}
-		if (iScrollTop>=offset2 && iScrollTop < offset3){
-			activeLi = $('.sidebar-list>li:nth-child(2)');
-		}
-		if (iScrollTop>=offset3 && iScrollTop < offset4){
-			activeLi = $('.sidebar-list>li:nth-child(3)');
-		}
-		if (iScrollTop>=offset4){
-			activeLi = $('.sidebar-list>li:nth-child(4)');
-		}
-
-		activeLi.addClass('active');
+		$('.sidebar-list>li').each(function(){
+			let Target = $(this).find('.sidebar-link').attr('href');
+			let sectionOffset = $(Target).offset().top - 200;
+			if(iScrollTop >= sectionOffset){
+				activeLi = $(this);
+				activeLi.addClass('active');
+			}		
+		});
 		$('.sidebar-list>li').not(activeLi).removeClass('active');
-	
 
+		// gradient transition
+		let activeGradient;
 
-	
+		$('.section').each(function(){
+			let sectionOffset = $(this).offset().top - 200;
+			if(iScrollTop >= sectionOffset){
+				activeGradient = $(this).find('.section-background');
+				activeGradient.addClass('show');
+			}
+			
+		});
+		$('section .section-background').not(activeGradient).removeClass('show');
+
 	});
 
 	///------Navigation between sections
