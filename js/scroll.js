@@ -57,7 +57,7 @@ $(function(){
 		let activeGradient;
 
 		$('.section').each(function(){
-			let sectionOffset = $(this).offset().top - 200;
+			let sectionOffset = $(this).offset().top - 300;
 			if(iScrollTop >= sectionOffset){
 				activeGradient = $(this).find('.section-background');
 				activeGradient.addClass('show');

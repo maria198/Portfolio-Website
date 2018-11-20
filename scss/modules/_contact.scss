@@ -8,8 +8,7 @@ Contact, Contact Form
 
 .container-input{
 	position: relative;
-	padding: $pd/2 $pd;
-	margin: 0 (-$pd);
+	padding: $pd/2 0;
 	.rect{			
 		@include border-grd();
 		height:0.75em;
@@ -35,13 +34,6 @@ Contact, Contact Form
 		text-indent: $pd/2;
 
 	}
-	/*input:focus{
-	}
-	input:focus + label, textarea:focus + label{
-		top: 0;
-		font-size: 0.75em;
-		color: white;
-	}*/
 	label.focus{
 		top: 1em;
 		font-size: 0.75em;
@@ -70,10 +62,39 @@ Contact, Contact Form
 		width: 70%;
 		margin: auto;
 	}
+	.btn-submit{
+		display: block;
+		max-width: 60%;
+		margin: auto;
+	}
 } 
 @media only screen and (min-width: 991px) { 
-
+	.contact-container{
+		width: 85%;
+	}
+	.form-container{
+		height: 220px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		.container-input{
+			margin-right: 1em;
+			&:last-of-type{
+				margin-right: 0;
+				margin-left: 1em;
+			}
+			input{
+				
+			}
+		}
+	}
+	.btn-submit{
+		max-width: 50%;
+	}
 }
 @media only screen and (min-width: 1199px) { 
-
+	.contact-container{
+		width: 70%;
+		max-width: 50em;
+	}
 }  
