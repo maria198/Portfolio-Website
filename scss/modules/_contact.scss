@@ -49,10 +49,17 @@ Contact, Contact Form
 	@include shadow();
 	color: white;
 	text-transform: uppercase;
-	background-color: lighten($orange,8);
+	background-color: rgba(0,0,0,0);
 	width: 100%;
 	margin: $pd/2 0 $pd 0;
 	padding: $pd/4 0;
+	&:hover{
+		background-color: rgba(white,0.3);
+	}
+}
+input[type=submit]:active{
+	background-color: rgba(white,0.65);
+	color: $color-1;
 }
 @media only screen and (min-width: 576px) { 
 

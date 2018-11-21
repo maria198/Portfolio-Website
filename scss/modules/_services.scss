@@ -14,11 +14,15 @@
 		.service-content{background-image: $gradient-service-3n;}
 	}
 	
-
+	.arrow-container{
+		.arrow{
+			padding: 0.5em;
+		}
+	}
 }
 .service-content{
 	margin: $pd 0;
-	padding: $pd;
+	padding: $pd $pd/2;
 	text-align: center;
 	@include shadow();
 	
@@ -29,35 +33,81 @@
 	}
 }
 .service-title{
-	padding: $pd/2;
+	padding: $pd/2 0;
+	font-size: 1.25em;
 }
 
 @media only screen and (min-width: 576px) { 
-	.services{
-
-	}
-	
-	.service-content{
-		margin: $pd 0;
-	}
-}
-@media only screen and (min-width: 768px) { 
-	.service-content{
-		margin: $pd/2 $pd/2;
-	}
 	.services-container{
 		@include make-row();
 	}
 	.service{
 		@include make-col(6);
 	}
+	.service-content{
+		margin: $pd/4 $pd/4;
+	}
+}
+@media only screen and (min-width: 768px) { 
+	
+	.services-container{
+		@include make-row();
+	}
+	.service{
+		@include make-col(6);
+		.arrow-container{
+			.arrow{
+				padding: 0.7em;
+			}
+		}
+	}
+	.service-content{
+		margin: $pd/2 $pd/2;
+	}
 } 
 @media only screen and (min-width: 991px) { 
-	
+	.service{
+		transition: transform 0.3s ease;
+		.service-content{
+			transition: background-color 0.7s ease;
+			background-image: none !important;
+			@include border-grd;
+		}
+	}
+	.service:hover{
+		transform: translateY(-0.5em);
+		&:nth-child(3n-2){
+			.service-content{background-color: $color-2 !important;}
+		}
+		&:nth-child(3n-1){
+			.service-content{background-color: rgba($pink,0.9) !important;}
+		}
+		&:nth-child(3n){
+			.service-content{background-color: rgba($violet,0.7) !important;}
+		}
+	}
+	.service-title{
+		font-size: 1.4em;
+		padding: $pd/2 0;
+	}
 }
 @media only screen and (min-width: 1199px) { 
 	.service{
 		
 		@include make-col(4);
+		
+	}
+	.service-icon{
+		img{
+			height: 5em;
+		}
+	}
+	.service-title{
+		padding: $pd 0;
+	}
+	.service-content{
+		margin: $pd $pd;
+		padding: $pd $pd/2;
+		
 	}
 }  
