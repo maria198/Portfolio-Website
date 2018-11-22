@@ -34,13 +34,30 @@ body{
 	position: relative;
 }
 
-
 .section-title{
+	margin-bottom: 1em;
 	padding-top: calc(1.5em + 64px);
 	h2{
 		font-weight: 300;
 		text-transform: uppercase;
+		margin-bottom:0;
 	}
+}
+.section-title.row, {
+	margin: 0 0 1em 0;
+}
+%line-base{
+	width: 7em;
+	margin-bottom: 8px;
+	margin-left: 5px;
+}
+.line{
+	@include border-grd-line();
+	@extend %line-base;
+}
+.v-line{
+	@include border-grd-vline();
+	@extend %line-base;
 }
 
 .violet{

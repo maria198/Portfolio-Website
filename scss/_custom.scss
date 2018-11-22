@@ -46,6 +46,18 @@ $gradient-input: linear-gradient( to right , rgba($color-1, 0.1),rgba($color-3,0
 	border-image-slice: 1;
 	border-width: 2px;
 }
+@mixin border-grd-line(){
+	border-width: 0 0 2px 0;
+	border-style: solid;
+	border-image: linear-gradient( to right , white ,rgba(white,0));
+	border-image-slice: 1;
+}
+@mixin border-grd-vline(){
+	border-width: 0 0 2px 0;
+	border-style: solid;
+	border-image: linear-gradient( to right , lighten($violet, 25) ,rgba(white,0));
+	border-image-slice: 1;
+}
 /*Spacing*/
 $pd: 1.25em;
 

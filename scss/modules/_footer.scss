@@ -31,9 +31,13 @@ footer{
 			color: lighten($color-1, 17);
 		}
 	}
-	i{
+	i{	
+		transition: all ease 0.3s;
 		padding-right: $pd;
 		font-size: 1.25em;
+		&:hover{
+			transform: translateY(-0.2em) scale(1.2);
+		}
 	}
 }
 .footer-copyright{
@@ -41,6 +45,7 @@ footer{
 	background-color: lighten($color-3, 5);
 	h6{
 		margin:0;
+		font-size: 0.9em;
 	}
 }
 @media only screen and (min-width: 576px) { 
