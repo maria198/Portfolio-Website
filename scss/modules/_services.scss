@@ -77,13 +77,13 @@
 	.service:hover{
 		transform: translateY(-0.5em);
 		&:nth-child(3n-2){
-			.service-content{background-color: $color-2 !important;}
-		}
-		&:nth-child(3n-1){
 			.service-content{background-color: rgba($pink,0.9) !important;}
 		}
-		&:nth-child(3n){
+		&:nth-child(3n-1){
 			.service-content{background-color: rgba($violet,0.7) !important;}
+		}
+		&:nth-child(3n){
+			.service-content{background-color: rgba($orange,1) !important;}
 		}
 	}
 	.service-title{
@@ -96,6 +96,14 @@
 		
 		@include make-col(4);
 		
+	}
+	.service:hover{
+		&:nth-child(odd){
+			.service-content{background-color: rgba($pink,0.9) !important;}
+		}
+		&:nth-child(even){
+			.service-content{background-color: rgba($violet,0.7) !important;}
+		}
 	}
 	.service-icon{
 		img{

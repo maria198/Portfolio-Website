@@ -23,4 +23,6 @@ $(function(){
 	$('#openMobMenu').on('click', function(){
 		$('.menu-mobile').removeClass('closed');
 	});
+
+
 });

@@ -8,9 +8,18 @@ Works
 	}
 	.work-title{
 		background-image: $gradient-title;
+		/*border: $violet solid 2px;*/
+		/*@include border-grd-clr();*/
 		h3{
+			color: white;
 			margin: 0;
-			padding: $pd/2 $pd;
+			padding: $pd/1.5 $pd;
+			font-size: 1.25em;
+		}
+		i{
+			font-size: 1.25em;
+			padding-right: 0.7em;
+			color: lighten($violet, 50);
 		}
 	}
 }
@@ -21,27 +30,53 @@ Works
 }
 
 @media only screen and (min-width: 576px) { 
-
-	.works-container{
-		@include make-row();
-	}
 	.work{
-		@include make-col(6);
+		width: 100%;
+		margin-bottom: $pd*2;
 	}
+	
 	.work-content{
 		margin: $pd/2;
 	}
 }
 @media only screen and (min-width: 768px) { 
-
+	.works-container{
+		@include make-row();
+	}
+	.work{
+		img{
+			height: 100%;
+		}
+		@include make-col(6);
+	}
+	.work-content{
+		margin: 0 $pd;
+	}
 } 
 @media only screen and (min-width: 991px) { 
-	.container{
-	max-width: 80%;
-}
+	.work{
+		transition: all 0.5s ease;
+		&:hover{
+			transform: scale(1.05);
+		}
+		.work-title{
+			display: none;
+			background-image: none;
+			@include border-grd-clr();
+			h3{
+				color: lighten($violet,15);
+				margin: 0;
+				padding: $pd/1.5 $pd;
+				font-size: 1.4em;
+			}
+			i{
+				font-size: 1.25em;
+				padding-right: 0.7em;
+				color: lighten($violet, 40);
+			}
+		}
+	}
 }
 @media only screen and (min-width: 1199px) { 
-	.work{
-		@include make-col(4);
-	}
+	
 } 

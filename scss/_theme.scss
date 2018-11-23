@@ -35,6 +35,7 @@ body{
 }
 
 .section-title{
+	position: relative;
 	margin-bottom: 1em;
 	padding-top: calc(1.5em + 64px);
 	h2{
@@ -45,6 +46,9 @@ body{
 }
 .section-title.row, {
 	margin: 0 0 1em 0;
+}
+.title-center{
+	h2{display: initial;}
 }
 %line-base{
 	width: 7em;
@@ -130,14 +134,69 @@ body{
 		background-image: $gradient-about;
 	}
 }
-
+%triangle{
+	content:'';
+	position: absolute;
+	z-index: 20;
+	height: 2.5em;
+	width: 2.5em;
+}
+.triangle{
+	&:before{
+		@extend %triangle;
+		top: 63%;
+		left: 0;
+		background-image: url("../assets/triangles/tr-d-2.svg");
+	}
+}
+.triangle-v{
+	&:before{
+		@extend %triangle;
+		top: 63%;
+		left: 0;
+		background-image: url("../assets/triangles/tr-v.svg");
+	}
+}
+.triangle-right{
+	&:before{
+		@extend %triangle;
+		top: 55%;
+		left: 65%;
+		background-image: url("../assets/triangles/tr-d-2.svg");
+	}
+}
+@media only screen and (min-width: 576px) { 
+	.triangle-right{
+		position: relative;
+		&:before{
+			top: -50%;
+			left: 90%;
+		}
+	}
+}
 @media only screen and (min-width: 768px) { 
 	.section-title.title-center{
 		text-align: center;
+		justify-content: center;
+		.line{
+			display: none;
+		}
 	}
 	.section-title{
 		padding-bottom: $pd/2;
 		font-size: 1.25em;
+	}
+	.triangle,.triangle-v{
+		&:before{
+			top: 55%;
+		}
+	}
+	.triangle.center{
+		position: relative;
+		&:before{
+			top: -30%;
+			left: 0%;
+		}
 	}
 
 } 

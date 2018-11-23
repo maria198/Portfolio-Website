@@ -35,7 +35,7 @@ $gradient-service-n: linear-gradient(135deg, rgba($color-1,0.86) 30%, rgba(light
 $gradient-service-2n: linear-gradient(135deg, rgba($orange,1) 30%, rgba(lighten($color-1,20),0.4) );
 $gradient-service-3n: linear-gradient(135deg, rgba($color-2,1) 30%, rgba(lighten($color-1,20),0.4) );  
 
-$gradient-title: linear-gradient(115deg, rgba(lighten($violet,20),0.75), rgba( lighten($color-1, 9), 0.95)  );
+$gradient-title: linear-gradient( 315deg, rgba($color-2,0.3), rgba( lighten($violet, 10), 0.60)  70%);
 
 $gradient-input: linear-gradient( to right , rgba($color-1, 0.1),rgba($color-3,0.2));
 
@@ -43,6 +43,12 @@ $gradient-input: linear-gradient( to right , rgba($color-1, 0.1),rgba($color-3,0
 @mixin border-grd{
 	border-style: solid;
 	border-image: linear-gradient( to left , rgba(white,0.5) 5%,rgba(white,1) 75%,rgba(white,0.65));
+	border-image-slice: 1;
+	border-width: 2px;
+}
+@mixin border-grd-clr{
+	border-style: solid;
+	border-image: linear-gradient( -15deg , rgba($violet,0.1) 5% ,rgba($violet,0.5) 70%);
 	border-image-slice: 1;
 	border-width: 2px;
 }
