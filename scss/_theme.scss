@@ -141,6 +141,7 @@ body{
 	z-index: 20;
 	height: 2.5em;
 	width: 2.5em;
+	background-repeat: no-repeat;
 }
 .triangle{
 	&:before{
@@ -199,6 +200,16 @@ body{
 			left: 0%;
 		}
 	}
+
+} 
+
+@media only screen and (min-width: 991px) { 
+	.line, .v-line{
+		display: none;
+	}
+
+}
+@media only screen and (min-width: 1199px) { 
 
 } 
 

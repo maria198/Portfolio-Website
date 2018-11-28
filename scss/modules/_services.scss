@@ -74,7 +74,7 @@
 		}
 	}
 	.service:hover{
-		transform: translateY(-0.5em);
+		transform: translateY(-0.5em) !important;
 		&:nth-child(3n-2){
 			.service-content{background-color: rgba($pink,0.9) !important;}
 		}

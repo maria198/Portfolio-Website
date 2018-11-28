@@ -122,15 +122,61 @@ $(function(){
 		// ScrollReveal should proceed if we’re not mobile,
 		// or if we’re mobile with a matching minimum width. 
 	if (mq.matches) {
+		var oServices = anime({
+							  targets: '.service',
+							  opacity: {
+							  		value:[0,1],
+							  		delay: function(el,i,l){
+										return 500*i;
+									}
+							  },
+							  translateY: {
+							  		value: ['300px',0],
+							  		delay: function(el,i,l){
+										return 500*i;
+									}
+							  },
+							  easing: 'easeInOutQuad',
+							  autoplay: false			  
+							});
+
+		var oWorks = anime({
+							  targets: '.work',
+							  opacity: [0,1],
+							  scale: [
+							  	{value: 0},
+							  	{value: 2},
+							  	{value: 1}
+
+							  ],
+							  easing: 'easeInOutQuad',
+							  delay: function(el,i,l){
+										return 500*i;
+									},
+							  autoplay: false			  
+							});
+		
+
 	  	
 	  	$('.section-title').addClass('v').css('opacity','0');
+	  	$('.service').addClass('v').css('opacity','0');
 	  	//animate section-header on scroll
 	  	$(document).on('scroll',function(){
 	  		var iScrollTop = $(document).scrollTop();
+	  		var iServiceOffset = $('#section-2').offset().top - 500;
+			if(iScrollTop > iServiceOffset){
+				oServices.play();
+			}
+			var iWorkOffset = $('#section-3').offset().top - 500;
+			if(iScrollTop > iWorkOffset){
+				oWorks.play();
+			}
+			
 
 		  	$('.section-title').each(function(i,el){
 				var iHeadeingOffset = $(el).offset().top;
-				if( iScrollTop >= (iHeadeingOffset-300)){
+				if( iScrollTop >= (iHeadeingOffset-600)){
+
 
 					//-----prevents adding of class every time than we scroll
 					if($(el).hasClass('v') == true){
@@ -157,6 +203,20 @@ $(function(){
 
 				}
 			});
+
+			// $('.service').each(function(i,el){
+			// 	var iServiceOffset = $('#section-2').offset().top;
+			// 	if( iScrollTop >= (iServiceOffset-500)){
+
+			// 		//-----prevents adding of class every time than we scroll
+			// 		if($(el).hasClass('v') == true){
+						
+							
+			// 			$(el).removeClass('v');
+			// 		}
+
+			// 	}
+			// });
 	  	});
 	}
 

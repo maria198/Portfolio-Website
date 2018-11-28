@@ -118,6 +118,9 @@ Works
 	}
 	.work{
 		transition: all 0.5s ease;
+		&:hover{
+			transform: scale(1.05) !important;
+		}
 		.work-description{
 			position: absolute;
 			top: 50%;
@@ -170,9 +173,6 @@ Works
 			i{
 				display: none;
 			}
-		}
-		&:hover{
-			transform: scale(1.05);
 		}
 		&:hover .work-content{
 			&:before{
