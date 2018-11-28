@@ -23,6 +23,7 @@ Navigation for mobile devices
 .bars{
 	height: $bars-height;
 	width: $bars-width;
+	cursor: pointer;
 	.bar{
 		height: $bar-height;
 		background-image: $gradient-bars;

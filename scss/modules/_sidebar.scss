@@ -11,13 +11,19 @@ Sidebar
 } 
 @media only screen and (min-width: 991px) { 
 	.sidebar{
+		display: block;
+		transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 		width: $sidebar-w;
 		position: fixed;
+		transform: translateX(- $sidebar-w/2);
 		height: 100vh;
 		background-color: rgba(white,0.85);
+		@include shadow();
+		opacity:0;
 	}
 	.sidebar.show{
-		display: block;
+		opacity:1;
+		transform: translateX(0);
 	}
 	.sidebar-list{
 		writing-mode:vertical-rl;

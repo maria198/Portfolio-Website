@@ -1,3 +1,5 @@
+
+
 $(function(){
 
 	// input, textarea label animation
@@ -24,5 +26,10 @@ $(function(){
 		$('.menu-mobile').removeClass('closed');
 	});
 
+	$('.home')
+		.animateCss('fadeIn slow')
+		.css('opacity','1');
+
+	
 
 });
