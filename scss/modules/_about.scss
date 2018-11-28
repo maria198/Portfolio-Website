@@ -71,7 +71,19 @@ About
 	}
 } 
 @media only screen and (min-width: 991px) { 
+	.about-container{
+		.about-text{
+			opacity: 0;
+			font-size: 1.2em;
+		}
+		.about-icon{
+			img{
+				height: 4.5em;
+				// opacity: 0;
 
+			}
+		}
+	}
 }
 @media only screen and (min-width: 1199px) { 
 

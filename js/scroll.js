@@ -130,14 +130,20 @@ $(function(){
 										return 500*i;
 									}
 							  },
-							  translateY: {
-							  		value: ['300px',0],
+							  translateY:
+							  		[
+									  	{value: '300px'},
+									  	{value: '150px'},
+									  	{value: '-150px'},
+									  	{value: '0'}
+
+									  ],
 							  		delay: function(el,i,l){
 										return 500*i;
-									}
-							  },
-							  easing: 'easeInOutQuad',
-							  autoplay: false			  
+									},
+							 
+							  easing: [.91,-0.54,.29,1.56],
+							  autoplay: false,			  
 							});
 
 		var oWorks = anime({
@@ -156,10 +162,10 @@ $(function(){
 							  autoplay: false			  
 							});
 		
-
+		var oAboutTimeline = anime.timeline();
 	  	
 	  	$('.section-title').addClass('v').css('opacity','0');
-	  	$('.service').addClass('v').css('opacity','0');
+	  	$('.about-container .row').addClass('v');
 	  	//animate section-header on scroll
 	  	$(document).on('scroll',function(){
 	  		var iScrollTop = $(document).scrollTop();
@@ -203,20 +209,7 @@ $(function(){
 
 				}
 			});
-
-			// $('.service').each(function(i,el){
-			// 	var iServiceOffset = $('#section-2').offset().top;
-			// 	if( iScrollTop >= (iServiceOffset-500)){
-
-			// 		//-----prevents adding of class every time than we scroll
-			// 		if($(el).hasClass('v') == true){
-						
-							
-			// 			$(el).removeClass('v');
-			// 		}
-
-			// 	}
-			// });
+			
 	  	});
 	}
 
