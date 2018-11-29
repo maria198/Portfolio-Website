@@ -9,9 +9,6 @@ footer{
 }
 .footer-contact, .footer-media{
 	padding: $pd/2 0;
-	p{
-		margin:0;
-	}
 	.row{
 		padding-bottom: $pd/2;
 		margin: 0;
@@ -21,6 +18,14 @@ footer{
 			font-size: 1.25em;
 			width: 1.5em;
 			text-align:center;
+		}
+	}
+	a{
+		color: white;
+		font-size: 1em;
+		font-weight: 300;
+		&:hover{
+			color: lighten($color-1, 17);
 		}
 	}
 }
@@ -67,9 +72,18 @@ footer{
 			padding-right: 0;
 			padding-left: $pd;
 		}
+
+	}
+	.footer-contact, .footer-media{
+		h4{
+			font-size: 1.1em;
+		}
 	}
 } 
 @media only screen and (min-width: 991px) { 
+	.footer-container{
+		justify-content: center;
+	}
 	footer{
 		background-color: rgba(white,0);
 		position: relative;
@@ -77,31 +91,53 @@ footer{
 			display: none;
 		}
 	}
-	.footer-contact{
-		color: rgba(lighten($violet,20), 0.8);
-		display: flex;
-		flex-wrap: wrap;
-		.row{
-			padding-right: 1em;
-		}
-	}
-	.footer-copyright{
-		display: none;
-	}
 	.footer-media{
-
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
 		i{
 			padding-right: $pd/2;
 			padding-left: 0;
+			font-size: 1.4em;
+		}
+		a{
+			color: rgba(white, 0.9);
+			&:hover{
+				color: rgba(lighten($violet,35), 0.9);
+			}
+		}
+		.row{
+			padding-bottom: 0;
 		}
 	}
+	.footer-contact{
+		display: none;
+		/*flex-wrap: wrap;
+		a{
+			color: rgba(lighten($violet,20), 0.85);
+			&:hover{
+				color: rgba(lighten($violet,35), 0.9);
+			}
+		}
+		i{
+			color: rgba(lighten($violet,20), 0.7);
+		}
+		.row{
+			padding-right: 1em;
+			padding-bottom: 0;
+		}*/
+	}
+	.footer-copyright{
+		display: none;
+	}
 	.media-copyright{
-		font-size: 0.7em;
+		font-size: 1em;
 		margin:0;
+		color: rgba(white, 0.7);
 		display: block;
+	}
+	.footer-container{
+		padding-bottom: $pd/2;
 	}
 }
 @media only screen and (min-width: 1199px) { 

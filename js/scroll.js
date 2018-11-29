@@ -263,21 +263,18 @@ $(function(){
 
 				if($('.contact-form').hasClass('v') == true){
 					$('.contact-form')
-						.animateCss('slideInUp slow')
+						.animateCss('slideInUp slower')
 						.css('opacity','1')
 						.removeClass('v');
+					$('.contact-info')
+						.animateCss('fadeInUpBig slow')
+						.css('opacity','1');
+					$('.contact-message')
+						.animateCss('fadeInUpBig slower')
+						.css('opacity','1');
 				}
 			}
-			// else {
-			// 	if($(el).hasClass('invisible') == false){
-			// 		$(el).addClass('slideOutLeft');
-			// 		$(el).one('animationend', function(){
-			// 			$(this).addClass('invisible')
-			// 				.removeClass('slideOutLeft');
-			// 		});
-			// 		$(el).parent().removeClass('grow');
-			// 	}
-			// }
+			
 
 		  	$('.section-title').each(function(i,el){
 				var iHeadeingOffset = $(el).offset().top;

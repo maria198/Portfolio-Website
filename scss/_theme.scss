@@ -13,7 +13,12 @@ temporary!!!
 body{
 	
 }
-
+a{
+	color: white;
+	&:hover{
+		text-decoration: none;
+	}
+}
 /***********
 1. Fonts
 ***********/

@@ -1,8 +1,11 @@
 /***********
  Services
 ***********/
+.service-text{
+	display: none;
+	font-size: 1.1em;
+}
 .service{
-	
 	&:nth-child(3n-2){
 
 		.service-content{background-image: $gradient-service-n;}
@@ -14,9 +17,19 @@
 		.service-content{background-image: $gradient-service-3n;}
 	}
 	.arrow-container{
+		transition: all 0.5s ease;
 		.arrow{
 			padding: 0.5em;
 		}
+	}
+	.arrow-container.hide{
+		.arrow{
+			transform: rotate(225deg);
+			margin-top: $pd;
+		}
+	}
+	.line{
+		display: none;
 	}
 }
 .service-content{
@@ -39,12 +52,34 @@
 @media only screen and (min-width: 576px) { 
 	.services-container{
 		@include make-row();
+
 	}
 	.service{
 		@include make-col(6);
+		margin: $pd/2 0;
+		.line{
+			display: block;
+			width: 1em;
+			border-width: 5px;
+			margin: auto;
+			margin-bottom: $pd/2;
+			transform: rotate(45deg);
+		}
 	}
 	.service-content{
-		margin: $pd/4 $pd/4;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		margin: $pd/4 $pd/2;
+		padding: $pd 0 0 0;
+	}
+	.service-text{
+		padding: 0 $pd;
+		display: block;
+		flex: 1 0 1em;
+	}
+	.arrow-container{
+		display: none;
 	}
 }
 @media only screen and (min-width: 768px) { 
@@ -115,7 +150,6 @@
 	}
 	.service-content{
 		margin: $pd $pd;
-		padding: $pd $pd/2;
 		
 	}
 }  

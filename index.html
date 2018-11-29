@@ -6,6 +6,7 @@
 	<title>MT Web Designer</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,800|Nunito:200,200i,300,300i,400,600,700,800" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -98,8 +99,10 @@
 									<img src="assets/icons/design.svg" alt="">
 								</div>
 								<div class="service-title">UX Design</div>
+								<div class="line"></div>
+								<div class="service-text">Create an unforgettable experience for your users.</div>
 								<div class="arrow-container"><i class="arrow down"></i></div>
-								<div class="service-text"></div>
+								
 							</div>
 						</div>
 						<!-- service -->
@@ -109,8 +112,9 @@
 									<img src="assets/icons/development.svg" alt="">
 								</div>
 								<div class="service-title">Web Development</div>
+								<div class="line"></div>
+								<div class="service-text">Website development using the latest standarts</div>
 								<div class="arrow-container"><i class="arrow down"></i></div>
-								<div class="service-text"></div>
 							</div>
 						</div>
 						<!-- service -->
@@ -120,8 +124,10 @@
 									<img src="assets/icons/responsive.svg" alt="">
 								</div>
 								<div class="service-title">Responsive</div>
+								<div class="line"></div>
+								<div class="service-text">Your website is pretty on mobile devices too!</div>
 								<div class="arrow-container"><i class="arrow down"></i></div>
-								<div class="service-text"></div>
+								
 							</div>
 						</div>
 						<!-- service -->
@@ -131,8 +137,9 @@
 									<img src="assets/icons/wordpress.svg" alt="">
 								</div>
 								<div class="service-title">Wordpress</div>
-								<div class="arrow-container"><i class="arrow down"></i></div>
-								<div class="service-text"></div>
+								<div class="line"></div>
+								<div class="service-text">The most popular CMS platform</div>
+								<div class="arrow-container"><i class="arrow down"></i></div>				
 							</div>
 						</div>
 						<!-- service -->
@@ -142,8 +149,9 @@
 									<img src="assets/icons/content.svg" alt="">
 								</div>
 								<div class="service-title">Content Management</div>
+								<div class="line"></div>
+								<div class="service-text">Ability to change and add content</div>
 								<div class="arrow-container"><i class="arrow down"></i></div>
-								<div class="service-text"></div>
 							</div>
 						</div>
 						<!-- service -->
@@ -153,8 +161,9 @@
 									<img src="assets/icons/support.svg" alt="">
 								</div>
 								<div class="service-title">Support Maintenance</div>
+								<div class="line"></div>
+								<div class="service-text">Website maintenance through first month</div>
 								<div class="arrow-container"><i class="arrow down"></i></div>
-								<div class="service-text"></div>
 							</div>
 						</div>
 					</div>
@@ -177,7 +186,7 @@
 				<div class="works">
 					<div class="works-container">
 						<!-- work -->
-						<div class="work">
+						<div class="work" data-toggle="modal" data-target="#exampleModal">
 							<div class="work-content">
 								<div class="work-description">
 									<div class="work-title">
@@ -226,7 +235,27 @@
 			</div>
 		</div>
 	</section>
-	
+
+	<!-- Modal for Map-->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	<div id="map"></div>
 	<!-- Section About -->
 	<section id="section-4" class="section section-4">
 		<div class="section-background gradient-about">
@@ -322,33 +351,52 @@
 				<div class="contact">
 					<div class="contact-container">
 						<div class="contact-info">
-							<h3>Contact info</h3>
-							<h5></h5>
+							<h3>Contact me by phone or send an email</h3>
+							<div class="row justify-content-center">
+								<div class="col-6">
+									<div class="row align-items-center justify-content-end">
+										<p>Phone:</p>
+										<a href="tel:+64220628575">+64220628575</a>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="row align-items-center justify-content-start">
+										<p>Email:</p>
+										<a href = "mailto: mary.trepakova@gmail.com">mary.trepakova@gmail.com</a>
+									</div>
+								</div>
+							</div>
 						</div>
-						<h3>Get in touch, send me a message</h3>
+						<h3 class="contact-message">Get in touch, send me a message</h3>
 						<!-- contact form -->
 						<div class="contact-form">
 							<form action="">
 								<div class="form-container">
-									<div class="container-input">
-										<div class="rect"></div>	
-										<input id="name" name="name" type="text">
-										<label for="name">Your Name</label>
-									</div>
-									<div class="container-input">
-										<div class="rect"></div>
-										<input id="email" name="email" type="email">
-										<label for="email">E-mail</label>
-									</div>
-									<div class="container-input">
-										<div class="rect"></div>
-										<input id="pNumber" name="pNumber" type="text">
-										<label for="pNumber">Phone Number</label>
-									</div>
-									<div class="container-input">
-										<div class="rect"></div>
-										<textarea name="message" id="message" cols="20" rows="6"></textarea>
-										<label for="message">Message</label>
+									<div class="row">
+										<div class="col-sm-12 col-lg-6">
+											<div class="container-input">
+												<div class="rect"></div>	
+												<input id="name" name="name" type="text">
+												<label for="name">Your Name</label>
+											</div>
+											<div class="container-input">
+												<div class="rect"></div>
+												<input id="email" name="email" type="email">
+												<label for="email">E-mail</label>
+											</div>
+											<div class="container-input">
+												<div class="rect"></div>
+												<input id="pNumber" name="pNumber" type="text">
+												<label for="pNumber">Phone Number</label>
+											</div>
+										</div>
+										<div class="col-sm-12 col-lg-6">
+											<div class="container-input">
+												<div class="rect"></div>
+												<textarea name="message" id="message" cols="20" rows="6"></textarea>
+												<label for="message">Message</label>
+											</div>
+										</div>
 									</div>
 								</div>
 								<input id="contactSubmit" class="btn-submit" type="submit" value="Send">
@@ -369,11 +417,11 @@
 					<h4>Contact:</h4>
 					<div class="footer-phone row">
 						<i class="fas fa-mobile-alt"></i>
-						<p>+64220628575</p>
+						<a href="tel:+64220628575">+64220628575</a>
 					</div>
 					<div class="footer-mail row">
 						<i class="fas fa-envelope-square"></i>
-						<p>mary.trepakova@gmail.com</p>
+						<a href = "mailto: mary.trepakova@gmail.com">mary.trepakova@gmail.com</a>
 					</div>
 				</div>
 				<div class="footer-media">
@@ -397,6 +445,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="vendore/tilt/tilt.js"></script>
 	<script src="vendore/anime/anime.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
 	<script src="js/scroll.js"></script>
 	<script src="js/script.js"></script>
 

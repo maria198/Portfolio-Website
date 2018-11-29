@@ -18,11 +18,12 @@ Contact, Contact Form
 	label{
 		position: absolute;
 		z-index: 20;
-		top: 1.70em;
-		color: $color-1;
+		top: 1.45em;
+		color: $color-3;
 		padding: 0 $pd;
 		margin:0;
 		transition: all ease-in-out 0.2s;
+		font-size: 1.1em;
 	}
 	input,textarea{
 		width: 100%;
@@ -45,6 +46,7 @@ Contact, Contact Form
 	}
 }
 .btn-submit{
+	cursor: pointer;
 	@include border-grd();
 	@include shadow();
 	color: white;
@@ -66,7 +68,7 @@ input[type=submit]:active{
 }
 @media only screen and (min-width: 768px) { 
 	.contact-container{
-		width: 70%;
+		width: 65%;
 		margin: auto;
 	}
 	.btn-submit{
@@ -76,35 +78,68 @@ input[type=submit]:active{
 	}
 } 
 @media only screen and (min-width: 991px) { 
+	.btn-submit{
+		max-width: 40%;
+		font-size: 1.2em;
+		transition: all 0.5s ease-in-out;
+		&:hover{
+			width: 30%;
+			padding: $pd/2;
+		}
+	}
 	.contact-container{
 		width: 85%;
+		&>h3{
+			font-size: 1.5em;
+			text-align: center;
+			margin-bottom: $pd/2;
+		}
 	}
 	.form-container{
-		height: 220px;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		.container-input{
-			margin-right: 1em;
-			&:last-of-type{
-				margin-right: 0;
-				margin-left: 1em;
-			}
-			input{
-				
-			}
-		}
-	}
-	.btn-submit{
-		max-width: 50%;
+		margin-bottom: $pd;
 	}
 	.contact-form{
 		opacity: 0;
 	}
+	.contact-message{
+		opacity: 0;
+	}
+	.contact-info{
+		opacity: 0;
+		display: block;
+		text-align: center;
+		p{
+			margin-bottom: 0;
+			padding-right: $pd/2;
+		}
+		.row .row{
+			padding: $pd/2 $pd;
+			p{@include border-grd-line();}
+		}
+		h3{
+			font-size: 1.5em;
+		}
+		.row{
+			font-size: 1.05em;
+		}
+		a{
+			&:hover{
+				color: rgba(white, 0.6);
+			}
+		}
+	}
 }
 @media only screen and (min-width: 1199px) { 
 	.contact-container{
-		width: 70%;
+		width: 80%;
 		max-width: 50em;
+	}
+	.contact-info{
+		.row{
+			font-size: 1.1em;
+		}
 	}
 }  

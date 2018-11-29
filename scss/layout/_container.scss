@@ -22,8 +22,8 @@
 	.container{
 		max-width: 80%;
 		padding-left: $pd*3 ;
-		padding-right: $pd*3 ;
-		/*padding-right: calc(#{$pd}*3 - #{$sidebar-w});*/
+		/*padding-right: $pd*3 ;*/
+		padding-right: calc(#{$pd}*3 - #{$sidebar-w});
 	}
 	.section, .section-background{
 		min-height: 800px;
@@ -32,5 +32,7 @@
 @media only screen and (min-width: 1199px) { 
 	.container{
 		max-width: 1000px;
+		padding-left: $pd*3 ;
+		padding-right: $pd*3 ;
 	}
 } 
