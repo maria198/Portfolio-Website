@@ -60,6 +60,9 @@ About
 			@include make-col(5);
 			padding-left: 0;
 		}
+		.about-text.center{
+			padding-top: $pd;
+		}
 		.about-icon{
 			@include make-col(2);
 			padding: 0 $pd;
@@ -70,17 +73,39 @@ About
 		}
 	}
 } 
+@keyframes select{
+	0%{
+		opacity: 0.5;
+		transform:  scale(1.5);
+		color: $pink;
+	}
+
+
+	50%{
+		transform:  scale(0.7);
+		opacity: 0.5;
+	}
+
+	100%{
+		transform: scale(1.1);
+		opacity: 1;
+		color: white;
+	}
+}
 @media only screen and (min-width: 991px) { 
 	.about-container{
 		.about-text{
 			opacity: 0;
 			font-size: 1.2em;
+			transition: all 1s ease-in-out;
+			&:hover{
+				animation: select 1s 1 forwards ;
+			}
 		}
 		.about-icon{
+			opacity: 0;
 			img{
-				height: 4.5em;
-				// opacity: 0;
-
+				height: 5em;
 			}
 		}
 	}

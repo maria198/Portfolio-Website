@@ -117,33 +117,25 @@ $(function(){
 
 	});
 
-	var mq = window.matchMedia( "(min-width: 900px)" );
+	var mq = window.matchMedia( "(min-width: 991px)" );
 
 		// ScrollReveal should proceed if we’re not mobile,
 		// or if we’re mobile with a matching minimum width. 
 	if (mq.matches) {
 		var oServices = anime({
-							  targets: '.service',
-							  opacity: {
-							  		value:[0,1],
-							  		delay: function(el,i,l){
-										return 500*i;
-									}
-							  },
-							  translateY:
-							  		[
-									  	{value: '300px'},
-									  	{value: '150px'},
-									  	{value: '-150px'},
-									  	{value: '0'}
-
-									  ],
-							  		delay: function(el,i,l){
-										return 500*i;
+							  	targets: '.service',
+							  	translateY: ['300',0],					  		
+							 	opacity:[
+							 		{value:0},
+							 		{value:0},
+							 		{value:1}
+							 	],
+							  	easing: 'linear',
+							  	delay: function(el,i,l){
+										return 300*i;
 									},
-							 
-							  easing: [.91,-0.54,.29,1.56],
-							  autoplay: false,			  
+								duration:1800,
+							  	autoplay: false,			  
 							});
 
 		var oWorks = anime({
@@ -162,10 +154,90 @@ $(function(){
 							  autoplay: false			  
 							});
 		
-		var oAboutTimeline = anime.timeline();
+		var oAboutTimeline = anime.timeline(
+				{
+					autoplay: false,
+					duration: 1800
+				}
+			);
+
+		oAboutTimeline.add({
+							  	targets: '.about-icon',
+							  	translateY: ['-300',0],	
+							  	scale: [
+							 		{value:0.5},
+							 		{value: 2},
+							 		{value:1}
+							 	],				  		
+							 	opacity:[
+							 		{value:0},
+							 		{value:0},
+							 		{value:1}
+							 	],
+							  	easing: 'linear',
+							  	delay: function(el,i,l){
+										return 300*i;
+									},
+								offset:0		  
+							});
+		oAboutTimeline.add({
+							  	targets: '.about-text.left',
+							  	translateX: ['-150',0],	
+							  	scale: [
+							 		{value:0.5},
+							 		{value:1.5},
+							 		{value:1}
+							 	],				  		
+							 	opacity:[
+							 		{value:0},
+							 		{value:0},
+							 		{value:1}
+							 	],
+							  	easing: 'linear',
+							  	delay: function(el,i,l){
+										return 300*(i+1);
+									},
+								offset:0		  
+							});
+		oAboutTimeline.add({
+							  	targets: '.about-text.right',
+							  	translateX: ['150',0],					  		
+							 	opacity:[
+							 		{value:0},
+							 		{value:0},
+							 		{value:1}
+							 	],
+							 	color:[
+							 		{value:'red'},
+							 		{value:'blue'},
+							 		{value:'white'}
+							 	],
+							  	easing: 'linear',
+							  	delay: function(el,i,l){
+										return 300*(i+2);
+									},
+								offset:0		  
+							});
+		oAboutTimeline.add({
+							  	targets: '.about-text.center',
+							  	translateY: ['300',0],					  		
+							 	opacity:[
+							 		{value:0},
+							 		{value:0},
+							 		{value:1}
+							 	],
+							 	scale:[
+							 		{value: 0.5},
+							 		{value: 1.2},
+							 		{value: 1}
+							 	],
+							  	easing: 'linear',
+							  	delay: 1200,
+								offset:0		  
+							});
 	  	
 	  	$('.section-title').addClass('v').css('opacity','0');
-	  	$('.about-container .row').addClass('v');
+	  	$('.contact-form').addClass('v');
 	  	//animate section-header on scroll
 	  	$(document).on('scroll',function(){
 	  		var iScrollTop = $(document).scrollTop();
@@ -173,11 +245,39 @@ $(function(){
 			if(iScrollTop > iServiceOffset){
 				oServices.play();
 			}
+
 			var iWorkOffset = $('#section-3').offset().top - 500;
 			if(iScrollTop > iWorkOffset){
 				oWorks.play();
 			}
-			
+
+			var iAboutOffset = $('#section-4').offset().top - 500;
+			if(iScrollTop > iAboutOffset){
+				oAboutTimeline.play();
+			}
+
+			var iContactOffset = $('#section-5').offset().top - 500;
+			if(iScrollTop > iContactOffset+200){
+
+				//-----prevents adding of class every time than we scroll
+
+				if($('.contact-form').hasClass('v') == true){
+					$('.contact-form')
+						.animateCss('slideInUp slow')
+						.css('opacity','1')
+						.removeClass('v');
+				}
+			}
+			// else {
+			// 	if($(el).hasClass('invisible') == false){
+			// 		$(el).addClass('slideOutLeft');
+			// 		$(el).one('animationend', function(){
+			// 			$(this).addClass('invisible')
+			// 				.removeClass('slideOutLeft');
+			// 		});
+			// 		$(el).parent().removeClass('grow');
+			// 	}
+			// }
 
 		  	$('.section-title').each(function(i,el){
 				var iHeadeingOffset = $(el).offset().top;

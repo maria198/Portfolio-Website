@@ -207,6 +207,14 @@ body{
 	.line, .v-line{
 		display: none;
 	}
+	.section-title{
+		padding-top: $pd*2;
+	}
+	.triangle,.triangle-v{
+		&:before{
+			top: 30%;
+		}
+	}
 
 }
 @media only screen and (min-width: 1199px) { 
