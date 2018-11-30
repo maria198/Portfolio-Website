@@ -1,7 +1,9 @@
 
 
 $(function(){
-	$(window).resize(function(){location.reload();});
+
+	// $('html, body').animate({ scrollTop: 0 }, 100);
+	// $(window).resize(function(){location.reload();});
 
 	// input, textarea label animation
 	$('.container-input > input, textarea').on('click',function(){
@@ -47,11 +49,25 @@ $(function(){
 		});
 	});
 	
-	// Map
-	var center = {lat: -45.031449, lng: 168.661904};
- 	var map = L.map('map').setView(center, 17);
 
- 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+	var map;
+		
+	
+
+	$('#exampleModal').on('shown.bs.modal', function () {
+	 	if(!map){
+
+	 		var center = {lat:-36.847178, lng: 174.763786}; 
+		 	map = L.map('map').setView(center, 14);
+
+		 	L.tileLayer('https://api.mapbox.com/styles/v1/mary-trepakova/cjotjoufl1abd2rpj2st4259i/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibWFyeS10cmVwYWtvdmEiLCJhIjoiY2pra2V6cHRzMDEzbDNqczc5NjF0aWptbiJ9.f52j7_rFo6_WhBh3aD3QKw').addTo(map);
+		 	var userIcon = L.icon({
+		 		iconUrl: '../assets/icons/icon-me_1.svg',
+		 		iconSize: [60,60]
+		 	});
+		 	var userMarker = L.marker(center,{icon: userIcon}).addTo(map);
+ 			userMarker.bindPopup('<div class="user-popup">Kia ora</div>');
+	 	}
+	})
+
 });

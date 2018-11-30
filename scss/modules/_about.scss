@@ -95,7 +95,6 @@ About
 @media only screen and (min-width: 991px) { 
 	.about-container{
 		.about-text{
-			opacity: 0;
 			font-size: 1.2em;
 			transition: all 1s ease-in-out;
 			&:hover{
@@ -103,7 +102,6 @@ About
 			}
 		}
 		.about-icon{
-			opacity: 0;
 			img{
 				height: 5em;
 			}

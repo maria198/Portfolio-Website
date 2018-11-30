@@ -74,12 +74,14 @@
 		padding: $pd 0 0 0;
 	}
 	.service-text{
-		padding: 0 $pd;
+		padding: 0 $pd $pd/2 $pd;
 		display: block;
 		flex: 1 0 1em;
 	}
-	.arrow-container{
-		display: none;
+	.service {
+		.arrow-container{
+			display: none;
+		}
 	}
 }
 @media only screen and (min-width: 768px) { 
@@ -98,10 +100,10 @@
 	.service-content{
 		margin: $pd/2 $pd/2;
 	}
+	.service-text{ padding-bottom: 0; }
 } 
 @media only screen and (min-width: 991px) { 
 	.service{
-		opacity: 0;
 		transition: transform 0.3s ease;
 		.service-content{
 			transition: background-color 0.7s ease;

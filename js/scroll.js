@@ -116,20 +116,27 @@ $(function(){
 			$('html, body').animate({scrollTop:targetOffset},1000);
 
 	});
-
-	var mq = window.matchMedia( "(min-width: 991px)" );
-
+	
+	var mq  = window.matchMedia( "(min-width: 991px)" );
 		// ScrollReveal should proceed if we’re not mobile,
 		// or if we’re mobile with a matching minimum width. 
 	if (mq.matches) {
+
+		//assign class v to all properties which should have an opacity = 1
+		$('.section-title').addClass('v').css('opacity','0');
+	  	$('.contact-form').addClass('v');
+	  	$('.contact-info').addClass('v');
+	  	$('.contact-message').addClass('v');
+	  	$('.service').addClass('v');
+	  	$('.work').addClass('v');
+	  	$('.about-text').addClass('v');
+	  	$('.about-icon').addClass('v');
+
+	  	//animation
 		var oServices = anime({
 							  	targets: '.service',
 							  	translateY: ['300',0],					  		
-							 	opacity:[
-							 		{value:0},
-							 		{value:0},
-							 		{value:1}
-							 	],
+							 	opacity:[0,1],
 							  	easing: 'linear',
 							  	delay: function(el,i,l){
 										return 300*i;
@@ -169,11 +176,7 @@ $(function(){
 							 		{value: 2},
 							 		{value:1}
 							 	],				  		
-							 	opacity:[
-							 		{value:0},
-							 		{value:0},
-							 		{value:1}
-							 	],
+							 	opacity:[0,1],
 							  	easing: 'linear',
 							  	delay: function(el,i,l){
 										return 300*i;
@@ -188,11 +191,7 @@ $(function(){
 							 		{value:1.5},
 							 		{value:1}
 							 	],				  		
-							 	opacity:[
-							 		{value:0},
-							 		{value:0},
-							 		{value:1}
-							 	],
+							 	opacity:[0,1],
 							  	easing: 'linear',
 							  	delay: function(el,i,l){
 										return 300*(i+1);
@@ -202,16 +201,7 @@ $(function(){
 		oAboutTimeline.add({
 							  	targets: '.about-text.right',
 							  	translateX: ['150',0],					  		
-							 	opacity:[
-							 		{value:0},
-							 		{value:0},
-							 		{value:1}
-							 	],
-							 	color:[
-							 		{value:'red'},
-							 		{value:'blue'},
-							 		{value:'white'}
-							 	],
+							 	opacity:[0,1],
 							  	easing: 'linear',
 							  	delay: function(el,i,l){
 										return 300*(i+2);
@@ -221,11 +211,7 @@ $(function(){
 		oAboutTimeline.add({
 							  	targets: '.about-text.center',
 							  	translateY: ['300',0],					  		
-							 	opacity:[
-							 		{value:0},
-							 		{value:0},
-							 		{value:1}
-							 	],
+							 	opacity:[0,1],
 							 	scale:[
 							 		{value: 0.5},
 							 		{value: 1.2},
@@ -236,24 +222,31 @@ $(function(){
 								offset:0		  
 							});
 	  	
-	  	$('.section-title').addClass('v').css('opacity','0');
-	  	$('.contact-form').addClass('v');
 	  	//animate section-header on scroll
 	  	$(document).on('scroll',function(){
 	  		var iScrollTop = $(document).scrollTop();
 	  		var iServiceOffset = $('#section-2').offset().top - 500;
 			if(iScrollTop > iServiceOffset){
 				oServices.play();
+
+				$('.service').removeClass('v');
+
+					
+					
 			}
 
 			var iWorkOffset = $('#section-3').offset().top - 500;
 			if(iScrollTop > iWorkOffset){
 				oWorks.play();
+				$('.work').removeClass('v');
 			}
 
 			var iAboutOffset = $('#section-4').offset().top - 500;
 			if(iScrollTop > iAboutOffset){
 				oAboutTimeline.play();
+				$('.about-text').removeClass('v');
+				$('.about-icon').removeClass('v');
+				
 			}
 
 			var iContactOffset = $('#section-5').offset().top - 500;
@@ -264,14 +257,13 @@ $(function(){
 				if($('.contact-form').hasClass('v') == true){
 					$('.contact-form')
 						.animateCss('slideInUp slower')
-						.css('opacity','1')
 						.removeClass('v');
 					$('.contact-info')
 						.animateCss('fadeInUpBig slow')
-						.css('opacity','1');
+						.removeClass('v');
 					$('.contact-message')
 						.animateCss('fadeInUpBig slower')
-						.css('opacity','1');
+						.removeClass('v');
 				}
 			}
 			
