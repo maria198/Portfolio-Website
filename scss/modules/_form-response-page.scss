@@ -1,0 +1,86 @@
+.thankyou-page{
+	background-image: $gradient-about;
+	text-align: center;
+	padding-top: $pd*2;
+	min-height: 100vh;
+	.thankyou-container{
+		background-color: rgba($violet, 0.4);
+		@include border-grd();
+		padding: $pd/2;
+		@include shadow();
+	}
+	h1{
+		font-weight: 300;
+		margin-bottom: $pd;
+		font-size: 1.75em;
+	}
+	.line{
+		display: block;
+		width: 1em;
+		border-width: 5px;
+		margin: $pd/2 auto;
+		transform: rotate(45deg);
+	}
+	p{
+		padding-top: $pd;
+		font-size: 1.5em;
+	}
+
+}
+.error-page{
+	background-image: $gradient-services;
+	padding-top: $pd*2;
+	min-height: 100vh;
+	.error-container{
+		background-color: rgba($violet, 0.4);
+		@include border-grd();
+		padding: $pd/2;
+		@include shadow();
+	}
+	h1{
+		font-weight: 300;
+		margin-bottom: $pd;
+		font-size: 1.75em;
+		text-align: center;
+	}
+	.line{
+		display: block;
+		width: 1em;
+		border-width: 5px;
+		margin: $pd/2 auto;
+		transform: rotate(45deg);
+	}
+	ul{
+		margin-left: $pd;
+		padding: $pd 0 0 0;
+		list-style-type: square;
+	}
+	@media only screen and (min-width: 991px) { 
+		ul{
+			margin: 0 auto;
+			width: 60%;
+			padding: $pd 0 0 0;
+			list-style-type: square;
+		}
+	}
+	p{
+		font-size: 1.2em;
+	}
+
+}
+.btn-back{
+	text-align: center;
+	display: block;
+	padding: $pd/2 $pd;
+	margin: $pd auto;
+	width: 100%;
+	max-width: 15em;
+	font-size: 1.2em;
+	@include shadow();
+	@include border-grd();
+	text-transform: uppercase;
+	&:hover{
+		background-color: rgba(white,0.45);
+		color: $violet;
+	}
+}

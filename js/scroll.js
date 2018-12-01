@@ -113,7 +113,7 @@ $(function(){
 
 			var sTarget = $(this).data('target');
 			var targetOffset = $(sTarget).offset().top;
-			$('html, body').animate({scrollTop:targetOffset},1000);
+			$('html, body').animate({scrollTop:targetOffset},2000);
 
 	});
 	

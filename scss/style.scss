@@ -28,7 +28,7 @@
 // @import "../node_modules/bootstrap/scss/code";
 @import "../node_modules/bootstrap/scss/grid";
 // @import "../node_modules/bootstrap/scss/tables";
-// @import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/forms";
 // @import "../node_modules/bootstrap/scss/input-group";
 // @import "../node_modules/bootstrap/scss/custom-forms";
 // @import "../node_modules/bootstrap/scss/nav";
@@ -61,3 +61,4 @@
 @import "modules/sidebar";
 @import "modules/footer";
 @import "modules/map-modal";
+@import "modules/form-response-page";

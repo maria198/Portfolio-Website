@@ -45,6 +45,18 @@ Contact, Contact Form
 		background-color: lighten( rgba($violet,0.5),25);
 	}
 }
+input, textarea {
+    &:valid + label{
+      	top: 1em;
+		font-size: 0.75em;
+		color: white;
+    }
+    &:focus + label {
+      	top: 1em;
+		font-size: 0.75em;
+		color: white;
+    }
+  }
 .btn-submit{
 	cursor: pointer;
 	@include border-grd();

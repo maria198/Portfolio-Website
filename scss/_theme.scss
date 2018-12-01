@@ -5,13 +5,21 @@
 /************************
 temporary!!!
 ************************/
-
+.form-control{
+	border-radius: 0 !important;
+}
+.invalid-feedback{
+	color: lighten($color-3, 27);
+}
+.valid-feedback{
+	color: lighten($color-2, 15);
+}
 .sidebar{
 	display:none;
 }
 
 body{
-	
+	overflow-x: hidden;
 }
 a{
 	color: white;
