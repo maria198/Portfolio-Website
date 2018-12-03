@@ -47,15 +47,13 @@ Works
 	}
 }
 .work{
-	/*height: 100%;*/
 	width: 100%;
+	cursor: pointer;
 	img{
 		width: 100%;
 	}
 	.work-title{
 		background-image: $gradient-title;
-		/*border: $violet solid 2px;*/
-		/*@include border-grd-clr();*/
 		h3{
 			color: white;
 			margin: 0;

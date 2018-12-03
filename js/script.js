@@ -81,7 +81,7 @@ $(function(){
 
 		 	L.tileLayer('https://api.mapbox.com/styles/v1/mary-trepakova/cjotjoufl1abd2rpj2st4259i/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibWFyeS10cmVwYWtvdmEiLCJhIjoiY2pra2V6cHRzMDEzbDNqczc5NjF0aWptbiJ9.f52j7_rFo6_WhBh3aD3QKw').addTo(map);
 		 	var userIcon = L.icon({
-		 		iconUrl: '../assets/icons/icon.png',
+		 		iconUrl: './assets/icons/icon.png',
 		 		iconSize: [60,75]
 		 	});
 		 	var userMarker = L.marker(center,{icon: userIcon}).addTo(map);
