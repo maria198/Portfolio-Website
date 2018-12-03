@@ -75,6 +75,7 @@ Works
 .work-content{
 	margin: $pd 0;
 	@include shadow();
+	cursor: pointer;
 	
 }
 
