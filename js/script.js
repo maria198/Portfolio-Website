@@ -6,28 +6,18 @@ $(function(){
 	// $(window).resize(function(){location.reload();});
 
 	// input, textarea label animation
-
-	$('.container-input > input, textarea').on('click',function(){
+	$('.container-input > input[type=text]').focus(function(){
 		$(this).prev().addClass('focus');
-		$(this).next().addClass('focus');
 	});
-	$('.container-input > input[type=text]').on('blur', function(){
-		let oNext;
-		oNext = $(this).parent().next().find('.rect');
-		if(oNext.length == 0){
-			oNext = $(this).parent().parent().next().find('.container-input').find('.rect');
-		}
-		oNext.addClass('focus');
+	$('.container-input > textarea').focus(function(){
+		$(this).prev().addClass('focus');
+	});
 
-	});
 	$('.container-input > input, textarea').on('blur', function(){
 		if( !$(this).val())
 		{
 			$(this).prev().removeClass('focus');
 			$(this).next().removeClass('focus');
-		}else{
-			$(this).prev().addClass('focus');
-			$(this).next().addClass('focus');
 		}
 	});
 	$('.container-input > input, textarea').each(function(i,el){
